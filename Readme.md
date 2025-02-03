@@ -349,7 +349,10 @@ Sentry: https://sd-consultancy.sentry.io/issues/?referrer=sidebar&statsPeriod=24
 ![image](https://github.com/user-attachments/assets/74c348c0-e1ab-4e7c-a9f1-64c54b9e3214)
 
 
-Splunk: 
+Splunk: https://prd-p-mjndj.splunkcloud.com/en-GB/app/Splunk_TA_aws/search?earliest=-24h%40h&latest=now&q=search%20index%3D%22lambda-mightybyte%22&sid=1738586120.8165&display.page.search.mode=smart&dispatch.sample_ratio=1&workload_pool=
+
+![image](https://github.com/user-attachments/assets/6cc629e4-8b40-4b4d-95bc-9d4274fd6baf)
+
 
 Frontend Repo: https://github.com/SoumikDey/mightybyte-frontend
 
