@@ -331,7 +331,13 @@ jobs:
 
 Frontend Enpoint: https://dr5mm3v9jcs5c.cloudfront.net
 
+![image](https://github.com/user-attachments/assets/d7ca1d42-0cb6-40ae-b700-1d52e3dabd94)
+
+
 API Endpoint: https://ptdc6mm3eb.execute-api.us-west-2.amazonaws.com/prod/tasks
+
+![image](https://github.com/user-attachments/assets/01854e0a-bc45-43a6-acef-cd1ef0e6867d)
+
 
 Cloudwatch Dashboard: https://us-west-2.console.aws.amazon.com/cloudwatch/home?region=us-west-2#dashboards/dashboard/prod-mightybyte-lambda-dashboard?start=PT1H&end=null
 ![image](https://github.com/user-attachments/assets/c4d648ef-6502-48e2-b068-d712ab1d26ec)
