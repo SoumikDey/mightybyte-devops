@@ -1,4 +1,4 @@
-module "s3-frontend" {
+module "s3-remote-backend" {
   source = "../s3-bucket"
   bucket = "${var.resource_tags["environ"]}-remote-backend"
   versioning = {

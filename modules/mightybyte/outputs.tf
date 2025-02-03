@@ -30,3 +30,20 @@ output "secret_name" {
 output "cloudfront_url" {
   value = aws_cloudfront_distribution.s3_distribution.domain_name
 }
+
+output "cloudwatch_dashboard_url" {
+  value = module.lambda_metrics.dashboard_url
+}
+
+
+output "api_gateway_url" {
+  value = "${aws_apigatewayv2_stage.prod.invoke_url}/tasks" 
+}
+
+output "s3_frontend_bucket" {
+  value = module.s3-frontend.s3_bucket_id
+}
+
+output "cloudfront_distribution_id" {
+  value = aws_cloudfront_distribution.s3_distribution.id
+}

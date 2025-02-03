@@ -1,3 +1,5 @@
+## Setup Instructions
+
 ### Generate Access key and Secret Key from AWS -
 - Login to your account.
 - Click on your profile > Security credentials > Create Access Key.
@@ -12,10 +14,10 @@
 - Attach Required Permissions
 - Review and Create the Role
 - You need to copy the ARN of the Role add in GitHub Action.
-<!-- - Copy the Role ARN
+- Copy the Role ARN
 - Go to  GitHub repository, go to Settings > Secrets and variables > Actions.
 - Add ARN to secrets
-- Go to GitHub Action YAML Workflow code 
+<!-- - Go to GitHub Action YAML Workflow code 
 - - &minus; name: Configure AWS Credentials  <br>
     >uses: aws-actions/configure-aws-credentials@v2<br>
     >with:<br>
@@ -49,7 +51,7 @@
 - Using terraform we are creating the following resources -
   - VPC with private subnets, NAT, public subnets, Internet Gateway, Route tables, Subnet Group for DB.
   - RDS for postgres in private subnets.
-  - Lmabda layer for psycopg2.
+  - Lambda layer for psycopg2.
   - Lambda function inside private subnets.
   - Jumpbox inside public subnet, so we can connect with RDS to create database and table.
   - S3 bucket and CloudFront.
@@ -57,9 +59,10 @@
 - To apply this -
   - Download the terraform code.
   - cd inside `environment` folder, like - "cd production"
+  - Make changes to the default values in the `variables.tf` file according to the required configurations
   - terraform plan
   - terraform apply
-- It will create the resources and will shoe required details in output.
+- It will create the resources and will show required details in output.
 
 
 ### Connect to the Jumpbox from console and create Database and Schema in RDS -
@@ -96,10 +99,10 @@ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 - Go to backend repository - https://github.com/SoumikDey/mightybyte-backend
 - Settings > Secrets and variables > Actions 
 - Secrets - Update the following things
-  - AWS_ROLE_TO_ASSUME
-  - AWS_REGION
+  - `AWS_ROLE_TO_ASSUME` - This is the role created for Github Action in previous steps 
+  - `AWS_REGION`
 - Variables - Update the following things
-  - LAMBDA_FUNCTION_NAME
+  - `LAMBDA_FUNCTION_NAME` - Get this name from the terraform output
 - Then trigger the GitHub Action to deploy the backend code.
 
 
@@ -108,12 +111,12 @@ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 - Go to frontend repository - https://github.com/SoumikDey/mightybyte-frontend
 - Settings > Secrets and variables > Actions 
 - Secrets - Update the following things
-  - API_URL
-  - AWS_REGION
-  - AWS_ROLE_TO_ASSUME
+  - `API_URL` - Get this from the terraform output
+  - `AWS_REGION`
+  - `AWS_ROLE_TO_ASSUME` - This is the role created for Github Action in previous steps
 - Variables - Update the following things
-  - CLOUDFRONT_DISTRIBUTION_ID
-  - S3_BUCKET_NAME
+  - `CLOUDFRONT_DISTRIBUTION_ID` - Get this from the terraform output
+  - `S3_BUCKET_NAME` - Get this from the terraform output
 - Then trigger the GitHub Action to deploy the frontend code.
 - Hit the CloudFront URL to access the frontend.
 
@@ -157,16 +160,20 @@ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 
 For adding tasks:
 
-curl -X POST <API_URL>/< STAGE >/tasks \\
+```
+curl -X POST <API_URL>/tasks \\
 -H "Content-Type: application/json" \\
 -d '{"description": "Complete the project report"}'
 
+```
+
 For viewing tasks:
+```
+curl -X GET <API_URL>/tasks
+```
 
-< comment > ADD CURL HERE
 
-
-## Bonus challenges -
+## Bonus challenges answers -
 
 ### CICD -
 #### Frontend -
@@ -278,7 +285,7 @@ jobs:
 - ...
 
 ### Secret Manager -
-- When we will apply terraform to create RDS then it will manage it's credential in AWS secret manager, also Lambda function will pull database's cred from that secret manager only ( That secret manager name is passed as variable in lambda function using terraform )
+- When we will apply terraform to create RDS then it will manage it's credential in AWS secret manager, also Lambda function will pull database's creds from that secret manager only ( That secret manager name is passed as variable in lambda function using terraform )
 
 ### Unit Test -
 - ...

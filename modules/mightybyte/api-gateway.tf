@@ -34,10 +34,12 @@ resource "aws_apigatewayv2_stage" "prod" {
     )
   }
 
-  # default_route_settings {
-  #   detailed_metrics_enabled = true
-  #   logging_level            = "INFO"
-  # }
+  default_route_settings {
+    detailed_metrics_enabled = true
+    logging_level            = "INFO"
+    throttling_burst_limit   = 100
+    throttling_rate_limit    = 100
+  }
 }
 
 resource "aws_cloudwatch_log_group" "main_api_gw" {

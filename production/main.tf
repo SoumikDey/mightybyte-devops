@@ -7,7 +7,7 @@ terraform {
   }
   required_version = ">= 1.5.0"
 
-  
+
   # backend "s3" {
   #   bucket         = "${var.resource_tags["environ"]}-remote-backend"
   #   key            = "mightybyte/terraform.tfstate"
@@ -18,6 +18,6 @@ terraform {
 }
 
 provider "aws" {
-  region = var.aws_region
+  region  = var.aws_region
   profile = "ajastos"
 }
