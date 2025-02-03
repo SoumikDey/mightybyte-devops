@@ -13,11 +13,11 @@ terraform {
   #   key            = "mightybyte/terraform.tfstate"
   #   region         = var.aws_region
   #   encrypt        = true
-  #   profile        = "ajastos"
+  #   profile        = "default"
   # }
 }
 
 provider "aws" {
   region  = var.aws_region
-  profile = "ajastos"
+  profile = "default"
 }
