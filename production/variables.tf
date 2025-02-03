@@ -33,5 +33,5 @@ variable "alert_email" {
 
 variable "error_threshold" {
   type    = number
-  default = 5
+  default = 2
 }

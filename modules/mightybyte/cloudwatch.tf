@@ -16,7 +16,7 @@ module "cloudwatch_alarm" {
   alarm_name       = "APIGateway5xxErrorAlarm"
   api_gateway_name = "${var.resource_tags["environ"]}-api-gateway"
   api_gateway_id   =   aws_apigatewayv2_api.main.id
-  error_threshold  = 5
+  error_threshold  = var.error_threshold
   evaluation_periods = 2
   period = 60
 }
