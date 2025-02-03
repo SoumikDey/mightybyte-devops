@@ -1,0 +1,10 @@
+# Terraform files
+*.tfstate
+*.terraform
+.terraform
+*.lock.hcl
+*.tfstate.backup
+**/.terraform
+
+.DS_Store
+PROB
