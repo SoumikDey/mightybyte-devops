@@ -1,3 +1,10 @@
+
+## Architecture
+
+For detailed architecture visit: https://github.com/SoumikDey/mightybyte-devops/blob/main/architecture.md
+
+
+
 ## Setup Instructions
 
 ### Generate Access key and Secret Key from AWS -
