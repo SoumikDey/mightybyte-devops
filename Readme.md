@@ -334,11 +334,17 @@ Frontend Enpoint: https://dr5mm3v9jcs5c.cloudfront.net
 API Endpoint: https://ptdc6mm3eb.execute-api.us-west-2.amazonaws.com/prod/tasks
 
 Cloudwatch Dashboard: https://us-west-2.console.aws.amazon.com/cloudwatch/home?region=us-west-2#dashboards/dashboard/prod-mightybyte-lambda-dashboard?start=PT1H&end=null
+![image](https://github.com/user-attachments/assets/c4d648ef-6502-48e2-b068-d712ab1d26ec)
 
-Sentry: 
+
+
+Sentry: https://sd-consultancy.sentry.io/issues/?referrer=sidebar&statsPeriod=24h
+
+![image](https://github.com/user-attachments/assets/74c348c0-e1ab-4e7c-a9f1-64c54b9e3214)
+
 
 Splunk: 
 
-Frontend Repo: 
+Frontend Repo: https://github.com/SoumikDey/mightybyte-frontend
 
-Backend Repo: 
+Backend Repo: https://github.com/SoumikDey/mightybyte-backend
