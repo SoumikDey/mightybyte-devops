@@ -1,3 +1,11 @@
+### Architecture Diagram -
+
+
+![image](https://github.com/user-attachments/assets/137c18d1-c4d0-4fc1-b1b4-ec01c0e6dca6)
+
+
+
+
 ### Our application contains the following resources -
 - VPC with private subnets, NAT, public subnets, Internet Gateway, Route tables, Subnet Group for DB.
 - RDS for postgres in private subnets.
@@ -15,6 +23,6 @@ AWS Lambda will send any issues to Sentry. Sentry will then filter these issues 
 
 AWS Lambda, RDS PostgreSQL, and API Gateway will send logs to CloudWatch. These logs will then be pulled by Splunk and stored in its index, allowing us to search through them.
 
-### Architecture Diagram -
+
 
 
