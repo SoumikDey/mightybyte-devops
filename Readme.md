@@ -5,6 +5,11 @@
 - Click on your profile > Security credentials > Create Access Key.
 - Create and download the access and secret key.
 
+### Create an SSH Key Pair
+- Login to your account.
+- Go to EC2 > Key Pairs.
+- Create key Pair with Type RSA. Name the key pair as `< ENV >-kp`
+
 ### Create role in AWS to add in GitHub Action -
 - Login to your account.
 - Navigate to IAM, Click on Roles in the left panel.
@@ -280,14 +285,10 @@ jobs:
 
 ```
 ### Cloudwatch Alarm -
-- ...
-- ...
-- ...
+- The Cloudwatch Alarm is automatically set via teraform, where it would send an email to the concerned person when the 5XX error reaches beyond the threshold.
 
 ### Secret Manager -
 - When we will apply terraform to create RDS then it will manage it's credential in AWS secret manager, also Lambda function will pull database's creds from that secret manager only ( That secret manager name is passed as variable in lambda function using terraform )
 
 ### Unit Test -
-- ...
-- ...
-- ...
+- The unit test for lambda is integrated in the CI/CD pipeline itself
