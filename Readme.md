@@ -356,4 +356,4 @@ Splunk: https://prd-p-mjndj.splunkcloud.com/en-GB/app/Splunk_TA_aws/search?earli
 
 Frontend Repo: https://github.com/SoumikDey/mightybyte-frontend
 
-end Repo: https://github.com/SoumikDey/mightybyte-end
+Backend Repo: https://github.com/SoumikDey/mightybyte-backend
