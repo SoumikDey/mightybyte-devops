@@ -329,7 +329,7 @@ jobs:
 
 ## Working links
 
-Frontend Enpoint: https://dr5mm3v9jcs5c.cloudfront.net
+Frontend Endpoint: https://dr5mm3v9jcs5c.cloudfront.net
 
 ![image](https://github.com/user-attachments/assets/d7ca1d42-0cb6-40ae-b700-1d52e3dabd94)
 
@@ -356,4 +356,4 @@ Splunk: https://prd-p-mjndj.splunkcloud.com/en-GB/app/Splunk_TA_aws/search?earli
 
 Frontend Repo: https://github.com/SoumikDey/mightybyte-frontend
 
-Backend Repo: https://github.com/SoumikDey/mightybyte-backend
+end Repo: https://github.com/SoumikDey/mightybyte-end
