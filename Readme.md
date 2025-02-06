@@ -44,10 +44,15 @@ AWS Lambda, RDS PostgreSQL, and API Gateway will send logs to CloudWatch. These 
 
 ### Create role in AWS to add in GitHub Action -
 - Login to your account.
-- Navigate to IAM, Click on Roles in the left panel.
+- Navigate to IAM, Click on Identity Provider in the left panel.
+- Select OpenID Connect (OIDC).
+  >Provider URL - https://token.actions.githubusercontent.com <br>
+  >Audience - sts.amazonaws.com
+- Click "Add provider" and Copy ARN
+- Click on Roles in the left panel.
 - Click on the Create Role button.
 - Under Trusted entity type, select Custom trust policy.
-- Add a trust policy for GitHub Repository
+- Add a trust policy with OIDC ARN for GitHub Repository
 - Attach Required Permissions
 - Review and Create the Role
 - You need to copy the ARN of the Role add in GitHub Action.
